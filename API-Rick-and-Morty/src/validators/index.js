@@ -37,14 +37,16 @@ const favoriteSchema = Joi.object({
 
 const validate = (schema) => {
   return (req, res, next) => {
-    const { error } = schema.validate(req.body);
+    const { error } = schema.validate(req.body, {abortEarly: false});
     if (error) {
+      console.error('Erro de validação:', error.details.map(d => d.message));
       return res.status(400).json({
         success: false,
         message: 'Dados inválidos',
         errors: error.details.map(detail => detail.message),
       });
     }
+    console.log('Validação OK');
     next();
   };
 };

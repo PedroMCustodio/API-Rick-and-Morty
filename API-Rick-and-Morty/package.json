@@ -11,7 +11,13 @@
     "db:studio": "prisma studio",
     "db:reset": "prisma db push --force-reset"
   },
-  "keywords": ["nodejs", "express", "prisma", "jwt", "api"],
+  "keywords": [
+    "nodejs",
+    "express",
+    "prisma",
+    "jwt",
+    "api"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
@@ -19,7 +25,7 @@
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "express": "^4.18.2",
+    "express": "^4.21.2",
     "express-rate-limit": "^7.1.5",
     "joi": "^17.11.0",
     "jsonwebtoken": "^9.0.2",
